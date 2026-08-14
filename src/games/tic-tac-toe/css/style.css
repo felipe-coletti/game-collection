@@ -17,7 +17,7 @@
 
 .circle {
     aspect-ratio: 1 / 1;
-    border: 0.5rem solid var(--color-highlight);
+    border: 0.75rem solid var(--color-highlight);
     border-radius: 50%;
     height: 3rem;
 }
