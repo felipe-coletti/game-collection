@@ -24,13 +24,13 @@ function switchPlayer() {
 function updateCell(index) {
     const cellElement = gameBoard.querySelector(`.cell[data-index='${index}']`)
 
-    if (cellElement.querySelector('div')) {
+    if (cellElement.querySelector('span')) {
         return
     }
 
     cells[index] = currentPlayer
 
-    const symbol = document.createElement('div')
+    const symbol = document.createElement('span')
     
     if (currentPlayer === 'X') {
         symbol.classList.add('cross')
