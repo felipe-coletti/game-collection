@@ -1,0 +1,51 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    max-width: 20rem;
+}
+
+.cell {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+}
+
+.circle {
+    aspect-ratio: 1 / 1;
+    border: 0.5rem solid var(--color-highlight);
+    border-radius: 50%;
+    height: 3rem;
+}
+
+.cross {
+    aspect-ratio: 1 / 1;
+    height: 3rem;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.cross::before {
+    height: 100%;
+    left: 50%;
+    margin-left: -15%;
+    width: 30%;
+}
+
+.cross::after {
+    height: 30%;
+    margin-top: -15%;
+    top: 50%;
+    width: 100%;
+}
+
+.cross::before,
+.cross::after {
+    background-color: var(--color-highlight);
+    content: '';
+    position: absolute;
+}
