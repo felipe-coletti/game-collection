@@ -7,8 +7,8 @@ const winConditions = [
     [0, 3, 6], [1, 4, 7], [2, 5, 8],
     [0, 4, 8], [2, 4, 6]
 ]
-const cells = ['', '', '', '', '', '', '', '', '']
 
+let cells = []
 let currentPlayer = 'X'
 let gameActive = true
 
@@ -18,6 +18,7 @@ function updateInstructions() {
 
 function switchPlayer() {
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+    
     updateInstructions()
 }
 
@@ -41,12 +42,16 @@ function updateCell(index) {
     cellElement.appendChild(symbol)
 }
 
-function createBoard() {
-    cells.forEach((_cell, index) => {
+function renderBoard() {
+    gameBoard.innerHTML = ''
+
+    cells.forEach((_, index) => {
         const cellElement = document.createElement('div')
+
         cellElement.classList.add('cell')
         cellElement.dataset.index = index
         cellElement.addEventListener('click', () => handleCellClick(index))
+
         gameBoard.appendChild(cellElement)
     })
 }
@@ -73,31 +78,29 @@ function handleCellClick(index) {
     if (checkWin()) {
         instructions.textContent = `Player ${currentPlayer} Wins!`
         gameActive = false
+
         return
     }
 
     if (checkDraw()) {
         instructions.textContent = "It's a Draw!"
         gameActive = false
+
         return
     }
 
     switchPlayer()
 }
 
-function resetGame() {
-    cells.fill('')
+function initGame() {
+    cells = Array(9).fill('')
 
     currentPlayer = 'X'
     instructions.textContent = 'X goes first'
     gameActive = true
 
-    const cellElements = document.querySelectorAll('.cell')
-    cellElements.forEach(cell => {
-        cell.innerHTML = ''
-    })
+    renderBoard()
 }
 
-resetButton.addEventListener('click', resetGame)
-
-createBoard()
+resetButton.addEventListener('click', initGame)
+initGame()
