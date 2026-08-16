@@ -36,7 +36,19 @@
     border-radius: 0.25rem;
     color: var(--color-text-primary);
     display: flex;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     justify-content: center;
 }
+
+.cell-2 { background-color: #eee4da; color: #776e65; }
+.cell-4 { background-color: #ede0c8; color: #776e65; }
+.cell-8 { background-color: #f2b179; color: #f9f6f2; }
+.cell-16 { background-color: #f59563; color: #f9f6f2; }
+.cell-32 { background-color: #f67c5f; color: #f9f6f2; }
+.cell-64 { background-color: #f65e3b; color: #f9f6f2; }
+.cell-128 { background-color: #edcf72; color: #f9f6f2; font-size: 1.8rem; }
+.cell-256 { background-color: #edcc61; color: #f9f6f2; font-size: 1.8rem; }
+.cell-512 { background-color: #edc850; color: #f9f6f2; font-size: 1.8rem; }
+.cell-1024 { background-color: #edc53f; color: #f9f6f2; font-size: 1.5rem; }
+.cell-2048 { background-color: #edc22e; color: #f9f6f2; font-size: 1.5rem; box-shadow: 0 0 10px #edc22e; }
