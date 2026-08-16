@@ -5,7 +5,8 @@
 	--color-button-shadow: #004f00;
 	--color-highlight: #0072e3;
 	--color-shadow: #d9d9d9;
-	--color-surface: #e4e4e4;
+	--color-surface-primary: #e4e4e4;
+	--color-surface-secondary: #bebebe;
 	--color-text-primary: #000;
 	--color-text-secondary: #585858;
 }
@@ -30,11 +31,15 @@
     align-items: center;
 	display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
-#h1 {
+.primary-title {
     font-size: 2rem;
+}
+
+.secondary-title {
+	font-size: 1.5rem;
 }
 
 .title {

@@ -1,0 +1,42 @@
+#score-container {
+    align-items: center;
+    background-color: var(--color-text-secondary);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+}
+
+#score-label {
+    color: var(--color-surface-primary);
+    font-size: 0.75rem;
+}
+
+#score {
+    color: var(--color-background);
+}
+
+#game-board {
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-surface-primary);
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem;
+    width: 20rem;
+}
+
+.cell {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-surface-secondary);
+    border-radius: 0.25rem;
+    color: var(--color-text-primary);
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+}
